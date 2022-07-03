@@ -1,0 +1,320 @@
+:root {
+    --inactiveHoverShadow: rgba(100, 149, 237, 0.6);
+    --inactiveHover: rgba(100, 149, 237);
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+    font-weight: 300;
+    font-style: normal
+}
+
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+    font-weight: 700;
+    font-style: normal
+}
+
+* {
+    margin: 0;
+    font-family: ProximaNova;
+    font-size: 1em;
+    color: rgb(112, 112, 112);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+body {
+    background-image: url("earth.jpg");
+    background-position: top;
+    background-size: 100vw;
+}
+
+#grid-box {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0), 0px 0px 50px 30px rgba(0, 0, 0, 0.671);
+}
+
+/*#header-shadow {
+    height: 80px;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+    position: fixed;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0), 0px 0px 50px 30px rgba(0, 0, 0, 0.671);
+}*/
+
+#header #language {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 0 30px 0 0;
+    width: 220px;
+}
+
+#header #language a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    padding: 5.5px 15px;
+    border-color: rgba(255, 255, 255, 0.651);
+    border-radius: 1em;
+    border-style: solid;
+    border-width: 1.5px;
+    color: white;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+    width: 70px;
+}
+
+#header #language a button {
+    opacity: 0;
+    padding: 0;
+    margin-right: 5px;
+    background-color: unset;
+    transition: 0.3s ease;
+    transform: translate(0, 20px);
+}
+
+#header #language a p {
+    padding-left: 5px;
+    transition: 0.2s ease;
+}
+
+/*#header #language a:hover p{
+    padding-left: 5px;
+    color: black;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.636);
+}*/
+#header #language a button:hover {
+    transition-delay: 0.2;
+    color: rgb(0, 0, 0);
+}
+
+#header #language a:hover {
+    width: 128.767px;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    transition-delay: 0s;
+}
+
+#header #language a:hover p {
+    color: black;
+}
+
+#header #language a:hover #EN {
+    transition-delay: 0.08s;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+#header #language a:hover #DE {
+    transition-delay: 0.16s;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.active-language {
+    color: black;
+    border: 0;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.inactive-language {
+    border: 0;
+    color: rgb(211, 211, 211);
+}
+
+
+
+
+#header #navigation {
+    display: flex;
+    background-color: black;
+    height: 100%;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    /*overflow: hidden;*/
+}
+
+#header #account {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: visible;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.3s ease;
+
+}
+
+#header #account:hover {
+    background-color: rgba(100, 148, 237, 0.856);
+    cursor: pointer;
+}
+
+#header #account #account-options {
+    height: 0;
+    visibility: hidden;
+    width: 250px;
+    top: 80px;
+    position: absolute;
+    transition: 0.5s ease;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.548);
+    z-index: -1;
+}
+
+#header #account #account-options div {
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+    padding: 0 30px;
+    transition: 0.3s ease;
+}
+
+#header #account #account-options div:hover {
+    background-color: rgba(255, 255, 255, 0.094);
+}
+
+#header #account #account-options div a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+#header #account #account-options #customize {
+    transform: translate(0, 10px);
+    opacity: 0;
+    transition-delay: 0.05s;
+}
+
+#header #account #account-options #logout {
+    transform: translate(0, 10px);
+    opacity: 0;
+    transition-delay: 0.1s;
+}
+
+#header #account:hover #account-options {
+    height: 100px;
+    visibility: visible;
+}
+
+#header #account:hover #account-options #customize {
+    opacity: 1;
+    transform: translate(0, 0px);
+    transition-delay: 0;
+}
+
+#header #account:hover #account-options #logout {
+    opacity: 1;
+    transform: translate(0, 0px);
+    transition-delay: 0;
+}
+
+#header #account-info {
+    display: flex;
+    /*overflow: hidden;*/
+    flex-direction: column;
+    padding: 0 30px 0 30px;
+    justify-content: center;
+    width: 190px;
+    height: 80px;
+}
+
+#header #navigation a {
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+    transition: 0.3s ease;
+}
+
+#header #navigation a:hover {
+    color: var(--inactiveHover);
+    text-shadow: 0 0 8px var(--inactiveHoverShadow), 0 0 30px var(--inactiveHoverShadow);
+    transform: translate(0, -1px);
+    /*animation: anim 0.4s ease forwards;*/
+}
+
+/*@keyframes anim {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, -20px);
+    }
+
+    51% {
+        transform: translate(0, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0px);
+    }
+
+
+}*/
+
+
+
+#active {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.322), 0 0 30px rgba(255, 255, 255, 0.781);
+    transition: 0.3s ease;
+}
+
+#active:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.849), 0 0 30px rgba(255, 255, 255, 0.678);
+}
+
+@media screen {}
